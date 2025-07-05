@@ -24,5 +24,5 @@ This mini project was built as part of my learning journey into **JavaScript arr
 - JavaScript (ES6)
 - Font Awesome (for optional icons)
 
+![clothes arrays objects ](https://github.com/user-attachments/assets/4808e3ec-22fa-4a09-905c-d2719421dc56)
 
-![clothes arrays objects ](https://github.com/user-attachments/assets/5b5adb83-8ca4-46d1-93e2-c81ab3681686)
