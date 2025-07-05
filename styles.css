@@ -1,0 +1,84 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+.navbar-brand,
+.nav-link {
+  color: white !important;
+}
+.navbar-brand {
+  margin-left: 0;
+}
+.navbar-brand:hover {
+  color: yellow;
+}
+.nav-link {
+  color: #f8f9fa !important;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.3s ease ease-in-out;
+}
+.nav-link:hover {
+  color: #ffcc00 !important;
+  text-decoration: underline;
+}
+.navbar-toggler-icon {
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+.carousel-container {
+  position: relative;
+  height: 100vh;
+}
+#carouselExampleSlidesOnly {
+  height: 100%;
+}
+.carousel-item img {
+  object-fit: cover;
+  width: 50%;
+  height: 100vh;
+  filter: brightness(50%);
+}
+.carousel-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+.carousel-text h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.carousel-text p {
+  font-size: 1.3rem;
+}
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+#background-pro {
+  width: 100px;
+  height: 100px;
+}
+.navbar-brand:hover {
+  color: #ffcc00;
+}
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}

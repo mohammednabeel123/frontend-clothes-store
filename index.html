@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elegant Islamic Wear</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .navbar {
+        background-color: rgba(7, 7, 7, 0.9);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        padding: 15px 0;
+      }
+      .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: white;
+        margin-left: 20px;
+      }
+      .navbar-brand:hover{
+        color: #d89e00;
+      }
+      .nav-link {
+        color: rgb(255, 255, 255) !important;
+        margin: 0 15px;
+        transition: 0.3s;
+      }
+      .nav-link:hover {
+        color: #f8b400 !important;
+      }
+      .navbar-toggler-icon {
+        background-color: rgb(231, 223, 223);
+      }
+
+      /* Hero Section */
+      .hero-container {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+      .hero-image img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        filter: brightness(60%);
+      }
+      .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        z-index: 10;
+        width: 80%;
+      }
+      .hero-content h2 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .btn-custom {
+        background-color: #f8b400;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        padding: 12px 25px;
+        border-radius: 30px;
+        transition: 0.3s;
+      }
+      .btn-custom:hover {
+        background-color: #d89e00;
+      }
+
+      /* Featured Products */
+      .featured-section {
+        padding: 80px 0;
+        text-align: center;
+      }
+      .product-card {
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        border-radius: 10px;
+      }
+      .product-card:hover {
+        transform: translateY(-10px);
+      }
+      .testimonial-section {
+        background-color: #f8f8f8;
+        padding: 80px 0;
+        text-align: center;
+      }
+      .testimonial {
+        font-style: italic;
+        font-size: 1.2rem;
+        color: #333;
+      }
+      .customer-name {
+        font-weight: bold;
+        margin-top: 10px;
+      }
+
+      /* Footer */
+    
+      .features-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px 20px;
+        background-color: #f8f9fa;
+      }
+      
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 15px; /* Space between icon and text */
+        flex: 1;
+        min-width: 250px;
+        padding: 15px;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+      
+      .feature-icon img {
+        width: 40px;
+        height: 41px;
+      }
+      
+      .feature-content {
+        text-align: left;
+      }
+      
+      .feature-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+      
+      .feature-description {
+        font-size: 0.95rem;
+        color: #666;
+      }
+      
+      /* Responsive Design - Two columns on mobile */
+      @media (max-width: 768px) {
+        .features-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px;
+        }
+      
+        .feature {
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .features-container {
+          grid-template-columns: 1fr;
+        }
+      }
+      .custom-carousel-img {
+        width: 100%;
+        height: 70vh; /* Adjust for reasonable height */
+        object-fit: cover; /* Ensures it covers without distortion */
+      }
+    
+      @media (max-width: 768px) {
+        .custom-carousel-img {
+          height: 70vh; /* Adjusts height for smaller screens */
+        }
+      }
+      .hero-content{
+        color: rgb(252, 251, 251); 
+     font-family: "arial";
+     font-size: 3em;
+     margin: 10px 0 0 10px;
+     white-space: nowrap;
+     overflow: hidden;
+     width: 100%;
+     animation: animtext 4s steps(80, end); 
+      transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
+   }
+   @keyframes animtext { 
+     from {
+         width: 0;
+        transition: all 2s ease-in-out;
+     } 
+   }
+   .fa-star {
+    color: gray;
+  }
+  
+  .fa-star.checked {
+    color: gold;
+  }
+  .card-img-wrapper {
+    position: relative;
+  }
+
+  .quick-view {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .card-img-wrapper:hover .quick-view {
+    opacity: 1;
+  }
+
+  .card-img-wrapper:hover img {
+    opacity: 0.7;
+  }
+  #view{
+    border-color: #d89e00;
+    border-radius:0px;
+    margin: 5px 5px;
+  }
+  #view:hover{
+    background-color: #d89e00;
+    color: #f8f8f8;
+  }
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.fade-in.visible {
+  opacity: 1;
+}
+.slide-up {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.slide-up.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+.card {
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    background-color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-img-top {
+    border-radius: 0.5rem;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .product-Name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .p-price {
+    color: #28a745; /* bootstrap green */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .btn-button {
+    align-self: center;
+    background-color: #343a40; /* dark */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .btn-button:hover {
+    background-color: #495057;
+  }
+  
+  .fa-star.checked {
+    color: #ffc107; /* bootstrap yellow for stars */
+    margin-right: 2px;
+  }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <a class="navbar-brand" href="#">Elegant Islamic Wear</a>
+      <div class="container">
+        <button
+          title="nav"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">SHOP <span><i class="fas fa-caret-down ms-1"></i></span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#">PAGES
+              <span><i class="fas fa-caret-down ms-1"></i></span>
+            </a></li>
+            <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT US</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav ms-3">
+            <li class="nav-item">
+              <a title="user" class="nav-link text-light" href="#"
+                ><i class="fa-solid fa-user"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="hero-container">
+      <div class="hero-image">
+        <img src="13.webp" alt="Dress 1" />
+      </div>
+      <div class="hero-content">
+        <h2>Ramadan Sale</h2>
+        <p>Hijab up to 80% off</p>
+        <p>
+          Nulla porta dictumst vitae scelerisque sollicitudin ut amet commodo
+          pulvinar diam donec eu sit accumsan laoreet mattis aliquam justo.
+        </p>
+        <a href="#" class="btn btn-custom">Shop Now
+          <span>
+            <i class="fas f "></i>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="featured-section">
+      <section class="container">
+        <div class="features-container">
+          <div class="feature">
+            <figure class="feature-icon">
+              <img src="https://templatekits.themewarrior.com/aisha/wp-content/uploads/sites/56/2022/05/added-truck.png" width="40" height="41" alt="Free Delivery">
+            </figure>
+            <div class="feature-content">
+              <div class="feature-title">Free Delivery</div>
+              <p class="feature-description">Nulla porta dictumst vitae</p>
+            </div>
+          </div>
+          <div class="feature">
+            <figure class="feature-icon">
+              <img src="https://templatekits.themewarrior.com/aisha/wp-content/uploads/sites/56/2022/05/added-truck.png" width="40" height="41" alt="30 Days Return">
+            </figure>
+            <div class="feature-content">
+              <div class="feature-title">30 Days Return</div>
+              <p class="feature-description">Nulla porta dictumst vitae</p>
+            </div>
+          </div>
+          <div class="feature">
+            <figure class="feature-icon">
+              <img src="https://templatekits.themewarrior.com/aisha/wp-content/uploads/sites/56/2022/05/added-truck.png" width="40" height="41" alt="Secure Payment">
+            </figure>
+            <div class="feature-content">
+              <div class="feature-title">Secure Payment</div>
+              <p class="feature-description">Nulla porta dictumst vitae</p>
+            </div>
+          </div>
+          <div class="feature">
+            <figure class="feature-icon">
+              <img src="https://templatekits.themewarrior.com/aisha/wp-content/uploads/sites/56/2022/05/added-truck.png" width="40" height="41" alt="24/7 Support">
+            </figure>
+            <div class="feature-content">
+              <div class="feature-title">24/7 Support</div>
+              <p class="feature-description">Nulla porta dictumst vitae</p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="9.webp" class="d-block w-100 custom-carousel-img" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+              <img src="10.webp" class="d-block w-100 custom-carousel-img" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+              <img src="11.webp" class="d-block w-100 custom-carousel-img" alt="Slide 3">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+        
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <div>
+          <p class="text-center m-2 border text-light bg-dark ">NEW COLLECTION</p>
+        </div>
+        <div>
+            <section class="col">
+                <div id="product-container" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                
+                </div>
+            </section>
+        </div>
+          </section>
+        </div>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>&copy; 2025 Elegant Islamic Wear. All rights reserved.</p>
+      <p>
+        <div>
+          <a href="#" class="text-light">Terms of Service</a> |
+          <a href="#" class="text-light">Privacy Policy</a>
+        </div>
+        <div>
+          <a href="#" class="text-light">Contact Us</a> |
+          <a href="#" class="text-light">FAQs</a>
+        </div>
+        <div>
+          <a title="#" href="#" class="text-light me-3"><i class="fa-brands fa-facebook-f"></i></a>
+          <a title="#" href="#" class="text-light me-3"><i class="fa-brands fa-twitter"></i></a>
+          <a title="#" href="#" class="text-light me-3"><i class="fa-brands fa-instagram"></i></a>
+          <a title="#" href="#" class="text-light"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
